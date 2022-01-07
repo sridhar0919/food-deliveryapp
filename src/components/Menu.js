@@ -52,110 +52,54 @@ export default function Menu() {
               );
             })}
         </div>
-
-        {/* <div>
-            <div className="card">
-              <img src="http://localhost:4000/pizza2.jpg" alt="pizza" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>
-                  123
-                </p>
-                <button className="menu-button">ORDER NOW</button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="card">
-              <img src="http://localhost:4000/pizza3.jpg" alt="pizza" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>123
-                </p>
-                <button className="menu-button">ORDER NOW</button>
-              </div>
-            </div>
-          </div>
-        </div> */}
         <h1>Seafood Menu</h1>
         <div className="first-menu">
-          <div>
-            <div className="card">
-              <img src="http://localhost:4000/seafood1.jpg" alt="Avatar" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>123
-                </p>
-                <button className="menu-button">ORDER NOW</button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="card">
-              <img src="http://localhost:4000/seafood2.jpg" alt="Avatar" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>123
-                </p>
-                <button className="menu-button">ORDER NOW</button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="card">
-              <img src="http://localhost:4000/seafood3.jpg" alt="Avatar" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>123
-                </p>
-                <button className="menu-button">ORDER NOW</button>
-              </div>
-            </div>
-          </div>
+          {seafoodMenu &&
+            seafoodMenu.map((menu, index) => {
+              return (
+                <div key={index}>
+                  <div className="card">
+                    <img
+                      src={`http://localhost:4000/seafood${index + 1}.jpg`}
+                      alt="pizza"
+                    />
+                    <div class="container">
+                      <p>{menu.name}</p>
+                      <p>
+                        <span>&#8377;</span>
+                        {menu.price}
+                      </p>
+                      <button className="menu-button">ORDER NOW</button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
         </div>
+
         <h1>Dessert Menu</h1>
         <div className="first-menu">
-          <div>
-            <div className="card">
-              <img src="http://localhost:4000/dessert1.jpg" alt="Avatar" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>123
-                </p>
-                <button className="menu-button">ORDER NOW</button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="card">
-              <img src="http://localhost:4000/dessert2.jpg" alt="Avatar" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>123
-                </p>
-                <button className="menu-button">ORDER NOW</button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="card">
-              <img src="http://localhost:4000/dessert3.jpg" alt="Avatar" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>123
-                </p>
-                <button className="menu-button">ORDER NOW</button>
-              </div>
-            </div>
-          </div>
+          {dessertMenu &&
+            dessertMenu.map((menu, index) => {
+              return (
+                <div key={index}>
+                  <div className="card">
+                    <img
+                      src={`http://localhost:4000/dessert${index + 1}.jpg`}
+                      alt="pizza"
+                    />
+                    <div class="container">
+                      <p>{menu.name}</p>
+                      <p>
+                        <span>&#8377;</span>
+                        {menu.price}
+                      </p>
+                      <button className="menu-button">ORDER NOW</button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </section>
       <Footer />

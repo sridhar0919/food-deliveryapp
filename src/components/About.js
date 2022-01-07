@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import './Homepage.css';
 import './Menu.css';
-import galleryImg1 from './images/galleryimg6.jpg';
-import galleryImg2 from './images/galleryimg4.jpg';
-import galleryImg3 from './images/galleryimg5.jpg';
+import axios from 'axios';
 import Footer from './Footer';
 import Scrollbutton from './Scrollbutton';
 
 export default function About() {
+  const [favourite, setFavourite] = useState(null);
+  const fetchFavourite = () => {
+    axios
+      .get('http://localhost:4000/get-food')
+      .then((res) => {
+        setFavourite(res.data[1].item);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    fetchFavourite();
+  }, []);
   return (
     <div>
       <Navbar />
@@ -63,39 +74,23 @@ export default function About() {
       <div className="home-about">
         <h1 style={{ marginBottom: '40px' }}>Favourites</h1>
         <div className="first-menu">
-          <div>
-            <div className="card">
-              <img src={galleryImg1} alt="pizza" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>123
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="card">
-              <img src={galleryImg2} alt="pizza" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>123
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="card">
-              <img src={galleryImg3} alt="pizza" />
-              <div class="container">
-                <p>Pepperoni Extreme</p>
-                <p>
-                  <span>&#8377;</span>123
-                </p>
-              </div>
-            </div>
-          </div>
+          {favourite &&
+            favourite.map((menu, index) => {
+              return (
+                <div key={index}>
+                  <div className="card">
+                    <img
+                      src={`http://localhost:4000/favourite${index + 1}.jpg`}
+                      alt="pizza"
+                    />
+                    <div class="container">
+                      <p>{menu.name}</p>
+                      <p>{menu.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </div>
       <Footer />
