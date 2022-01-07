@@ -1,0 +1,203 @@
+/* Body */
+.move-to-top-button {
+  position: fixed;
+  left: 90%;
+  bottom: 40px;
+  height: 50px;
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  background-color: #e67965;
+}
+
+.navbar > :nth-child(1) {
+  margin-left: 200px;
+}
+
+.navbar > li:last-child {
+  border: none;
+  margin-right: 150px;
+}
+
+.navbar-list {
+  margin-left: 10px;
+  margin-right: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  border-right: 1px solid white;
+}
+
+.navbar-link:hover,
+.navbar-link-current {
+  background-color: white !important;
+  color: #e67965 !important;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  padding: 23px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+}
+
+/* Body */
+.body-first-content {
+  background-image: url('./images/onder-ortel-JoyipnBDPAw-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  margin: 0;
+}
+
+.content-style {
+  color: #e67965;
+  margin-left: 20px;
+  margin-top: 90px;
+  list-style-type: none;
+}
+
+.content-style > :nth-child(1) {
+  font-size: 75px;
+  font-weight: 'bolder';
+}
+
+.content-style > :nth-child(3) {
+  margin-top: 35px;
+  color: black;
+  font-size: 30px;
+  font-weight: 'bold';
+}
+
+.body-img {
+  border: 0;
+  height: 400px;
+}
+
+.body-content {
+  display: flex;
+}
+
+.body-content > :nth-child(1) {
+  background-image: url('./images/fish-dashboard.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  width: 33.33%;
+  margin: 0;
+  position: relative;
+  opacity: 0.5;
+}
+
+.body-content > div:nth-child(1):hover,
+.body-content > div:nth-child(2):hover,
+.body-content > div:nth-child(3):hover {
+  opacity: 1;
+}
+
+.body-content > :nth-child(2) {
+  background: rgba(0, 0, 0, 0.7) url('./images/pizza-dashboard.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  width: 33.33%;
+  margin: 0;
+  position: relative;
+  opacity: 0.5;
+}
+
+.body-content > :nth-child(3) {
+  background-image: url('./images/desert-dashboard.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  width: 33.33%;
+  margin: 0;
+  position: relative;
+  opacity: 0.5;
+}
+
+.img-title {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  left: 100px;
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+  font-size: 35px;
+  margin-left: 40px;
+}
+
+.home-about {
+  padding: 40px 75px;
+}
+
+.home-about > h1 {
+  font-size: 50px;
+  margin: -10px 0;
+}
+
+.home-about > h3 {
+  font-size: 25px;
+}
+
+.home-about-content {
+  display: flex;
+}
+
+.icon-homepage {
+  color: #e67965;
+}
+
+.home-para {
+  width: 23%;
+  padding: 10px;
+}
+
+.home-para > p:nth-child(2),
+.home-para > p:nth-child(3) {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+  color: #222222;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+.home-para > p:nth-child(2) {
+  font-size: 30px;
+  font-weight: bold;
+  color: #e67965;
+  margin: 0px;
+}
+
+.img-block {
+  padding: 40px;
+}
+
+/* Footer */
+.footer-content {
+  display: flex;
+  padding: 43px;
+  background-color: #e67965;
+  color: white;
+  margin: 0px;
+}
+
+.footer-second {
+  margin-left: 150px;
+}

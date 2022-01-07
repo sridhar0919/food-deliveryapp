@@ -1,0 +1,80 @@
+.contact-main {
+  padding: 0px 100px;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.main-heading {
+  font-size: 45px;
+  padding: 30px 100px;
+}
+
+.section1-part1 {
+  font-size: 30px;
+  font-weight: 900;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+  color: #e67965;
+  margin-right: 150px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.section1-part1 > p {
+  padding: 0;
+  margin: 0;
+}
+
+.section1-part2 > p {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.section1-part2 {
+  font-size: 20px;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input,
+textarea {
+  width: 700px;
+  padding: 12px 25px;
+  margin: 8px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: large;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffebcd;
+}
+
+textarea {
+  height: 150px;
+}
+
+form > button {
+  float: right;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #e67965;
+  border: none;
+  border-radius: 2px;
+  font-size: 20px;
+  color: white;
+}
+
+form > button:hover {
+  cursor: pointer;
+  background-color: #ffcc99;
+  color: black;
+  font-weight: normal;
+}
+
+.para-form {
+  color: red;
+  padding: 0;
+  margin: 0;
+}
