@@ -48,7 +48,8 @@
 }
 
 .menu-button {
-  padding: 15px;
+  padding: 15px 25px;
+  margin-right: 8px;
   background-color: #e67965;
   border: none;
   border-radius: 2px;
@@ -62,4 +63,45 @@
   background-color: #ffcc99;
   color: black;
   font-weight: normal;
+}
+
+.button-add-remove {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Pop up */
+.pop-up {
+  position: fixed;
+  z-index: 11;
+  bottom: 0px;
+  transition: bottom 0.2s ease 0s;
+  width: 75%;
+  display: flex;
+  height: 4.5rem;
+  background: rgb(255, 255, 255);
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.pop-up-button {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding: 5px 20px;
+  background-color: #e67965;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+.pop-up-right {
+  display: flex;
+}
+
+.pop-up-right > h3 {
+  margin-top: 25px;
+  margin-right: 30px;
 }

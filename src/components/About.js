@@ -10,7 +10,7 @@ export default function About() {
   const [favourite, setFavourite] = useState(null);
   const fetchFavourite = () => {
     axios
-      .get('http://localhost:4000/get-food')
+      .get('https://food-deliveryapp1.herokuapp.com/get-food')
       .then((res) => {
         setFavourite(res.data[1].item);
       })
@@ -79,10 +79,7 @@ export default function About() {
               return (
                 <div key={index}>
                   <div className="card">
-                    <img
-                      src={`http://localhost:4000/favourite${index + 1}.jpg`}
-                      alt="pizza"
-                    />
+                    <img src={menu.img} alt="pizza" />
                     <div class="container">
                       <p>{menu.name}</p>
                       <p>{menu.desc}</p>

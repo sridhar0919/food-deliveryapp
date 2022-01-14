@@ -7,6 +7,8 @@ import Homepage from './components/Homepage';
 import Menu from './components/Menu';
 import About from './components/About';
 import Contact from './components/Contact';
+import Addtocart from './components/Addtocart';
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const routing = (
@@ -16,6 +18,7 @@ const routing = (
       <Route exact path="/menu" element={<Menu />} />
       <Route exact path="/about-us" element={<About />} />
       <Route exact path="/contact" element={<Contact />} />
+      <Route exact path="/order" element={<Addtocart />} />
     </Routes>
   </Router>
 );
