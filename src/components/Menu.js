@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
-import './Menu.css';
+import './css/Menu.css';
+import './css/Menu_mobile.css';
 import Footer from './Footer';
 import Scrollbutton from './Scrollbutton';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-// import Addtocart from './Addtocart';
 
 export default function Menu() {
   const [pizzaMenu, setPizzaMenu] = useState(null);

@@ -6,7 +6,7 @@ export default function Footer() {
       <footer className="footer-content">
         <div>
           <h1>YUMMY</h1>
-          <h3>&copy; | Privacy Policy</h3>
+          <h2>&copy; | Privacy Policy</h2>
         </div>
         <div className="footer-second">
           <h3>INDIA - CHENNAI</h3>

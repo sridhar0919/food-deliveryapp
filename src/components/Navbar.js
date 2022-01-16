@@ -1,37 +1,50 @@
 import React, { useState } from 'react';
-import './Homepage.css';
+import './css/Homepage.css';
+import './css/Home_mobile.css';
 
 export default function Navbar() {
+  const [isActive, setActive] = useState('false');
   return (
     <div className="body-first-content">
-      <nav>
-        <ul className="navbar">
-          <li className="navbar-list">
-            <a href="/" className="navbar-link">
-              Home
-            </a>
-          </li>
+      <nav className="navbar">
+        <div>
+          <a
+            href="#"
+            className="toggle-button"
+            onClick={() => {
+              setActive(!isActive);
+            }}
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </a>
+        </div>
 
-          <li className="navbar-list">
-            <a href="/about-us" className="navbar-link">
-              About us
-            </a>
-          </li>
+        <div className={isActive ? 'navbar-links active' : 'navbar-links'}>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <span>|</span>
 
-          <li className="navbar-list">
-            <a href="/menu" className="navbar-link">
-              Menu & Specials
-            </a>
-          </li>
+            <li>
+              <a href="/about-us">About us</a>
+            </li>
+            <span>|</span>
 
-          <li className="navbar-list">
-            <a href="/contact" className="navbar-link">
-              Contact us
-            </a>
-          </li>
-        </ul>
+            <li>
+              <a href="/menu">Menu & Specials</a>
+            </li>
+            <span>|</span>
+
+            <li>
+              <a href="/contact">Contact us</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <div>
+      <div className="second-content">
         <ul className="content-style">
           <li>YUMMY</li>
           <li style={{ color: 'black', fontSize: '20px' }}>Tasty gift ideas</li>

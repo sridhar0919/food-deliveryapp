@@ -1,0 +1,191 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  .contact-main {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .main-heading {
+    font-size: 33px;
+    padding: 30px 20px;
+  }
+
+  .section1-part1 {
+    font-size: 22px;
+    font-weight: 900;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    color: #e67965;
+    margin-right: 150px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .section1-part2 {
+    font-size: 18px;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 25px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: large;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffebcd;
+  }
+
+  form > button {
+    float: right;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #e67965;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    color: white;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 650px) {
+  .section1-part1 {
+    font-size: 28px;
+    font-weight: 900;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    color: #e67965;
+    margin-right: 150px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .section1-part2 {
+    font-size: 20px;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 767px) {
+  .section1-part1 {
+    font-size: 32px;
+    font-weight: 900;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    color: #e67965;
+    margin-right: 150px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .section1-part2 {
+    font-size: 22px;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  form > button {
+    float: right;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #e67965;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    color: white;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .contact-main {
+    padding: 0px 20px;
+    display: flex;
+    /* flex-direction: column; */
+    margin-bottom: 50px;
+  }
+
+  .main-heading {
+    font-size: 33px;
+    padding: 30px 20px;
+  }
+
+  input,
+  textarea {
+    width: 380px;
+    padding: 12px 25px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: large;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffebcd;
+  }
+
+  .section1-part1 {
+    font-size: 22px;
+    font-weight: 900;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    color: #e67965;
+    margin-right: 130px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  form > button {
+    float: right;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #e67965;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    color: white;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+  input,
+  textarea {
+    width: 480px;
+    padding: 12px 25px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: large;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffebcd;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+  input,
+  textarea {
+    width: 400px;
+    padding: 12px 25px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: large;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffebcd;
+  }
+}

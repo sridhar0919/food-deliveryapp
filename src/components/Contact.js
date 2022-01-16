@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
-import './Contact.css';
+import './css/Contact.css';
+import './css/Contact_mobile.css';
 import Footer from './Footer';
 import Scrollbutton from './Scrollbutton';
 

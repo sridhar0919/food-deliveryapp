@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar';
-import './Homepage.css';
-import './Menu.css';
+import './css/Homepage.css';
+import './css/Home_mobile.css';
+import './css/Menu.css';
+import './css/Menu_mobile.css';
 import axios from 'axios';
 import Footer from './Footer';
 import Scrollbutton from './Scrollbutton';
@@ -77,9 +79,9 @@ export default function About() {
           {favourite &&
             favourite.map((menu, index) => {
               return (
-                <div key={index}>
+                <div key={index} className="card-div">
                   <div className="card">
-                    <img src={menu.img} alt="pizza" />
+                    <img src={menu.img} alt="pizza" className="fav-img" />
                     <div class="container">
                       <p>{menu.name}</p>
                       <p>{menu.desc}</p>

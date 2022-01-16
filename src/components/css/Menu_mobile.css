@@ -1,0 +1,341 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  .menu-content {
+    padding: 20px 30px;
+  }
+
+  .menu-content > h1 {
+    font-size: 30px;
+  }
+
+  .first-menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+
+  .first-menu > div:nth-child(2),
+  .first-menu > div:nth-child(3) {
+    margin-left: 0px;
+  }
+
+  .card {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .card > img {
+    border-radius: 5px 5px 0 0;
+    width: 250px;
+    height: 200px;
+    margin-left: -8px;
+  }
+
+  .container {
+    padding: 2px 16px;
+  }
+
+  .container > p:nth-child(1) {
+    color: #e67965;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .container > p:nth-child(2) {
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    color: #222222;
+    font-size: 15px;
+    letter-spacing: 0px;
+  }
+
+  .button-add-remove {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .button-add-remove > button:nth-child(1),
+  .button-add-remove > button:nth-child(2) {
+    padding: 15px 20px;
+    margin-right: 8px;
+    background-color: #e67965;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  /* Pop up */
+  .pop-up {
+    position: fixed;
+    z-index: 11;
+    bottom: 0px;
+    transition: bottom 0.2s ease 0s;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    height: 6.5rem;
+    background: rgb(255, 255, 255);
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .pop-up-button {
+    margin-top: -5px;
+    margin-bottom: 15px;
+    padding: 5px 20px;
+    background-color: #e67965;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+  }
+
+  .pop-up-right {
+    display: flex;
+  }
+
+  .pop-up-right > h3 {
+    margin-top: -5px;
+    font-size: 15px;
+  }
+
+  .pop-up-head > h2 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 650px) {
+  .card > img {
+    border-radius: 5px 5px 0 0;
+    margin-left: 60px;
+    width: 330px;
+    height: 220px;
+  }
+
+  .menu-content {
+    padding: 20px 20px;
+  }
+
+  .button-add-remove {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .button-add-remove > button:nth-child(1),
+  .button-add-remove > button:nth-child(2) {
+    padding: 15px 25px;
+    margin-right: 8px;
+    background-color: #e67965;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  /* Pop up */
+  .pop-up {
+    position: fixed;
+    z-index: 11;
+    bottom: 0px;
+    left: 60px;
+    transition: bottom 0.2s ease 0s;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    height: 6.5rem;
+    background: rgb(255, 255, 255);
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .pop-up-button {
+    margin-top: -5px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    padding: 5px 20px;
+    background-color: #e67965;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+  }
+
+  .pop-up-right {
+    display: flex;
+  }
+
+  .pop-up-right > h3 {
+    margin-top: -5px;
+    font-size: 18px;
+  }
+
+  .pop-up-head > h2 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 767px) {
+  .card > img {
+    border-radius: 5px 5px 0 0;
+    margin-left: 80px;
+    width: 400px;
+    height: 250px;
+  }
+
+  .button-add-remove {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .button-add-remove > button:nth-child(1),
+  .button-add-remove > button:nth-child(2) {
+    padding: 15px 25px;
+    margin-right: 8px;
+    background-color: #e67965;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  /* Pop up */
+  .pop-up {
+    position: fixed;
+    z-index: 11;
+    bottom: 0px;
+    left: 60px;
+    transition: bottom 0.2s ease 0s;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    height: 7.5rem;
+    background: rgb(255, 255, 255);
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .pop-up-button {
+    margin-top: -5px;
+    margin-bottom: 10px;
+    margin-left: 160px;
+    padding: 5px 20px;
+    background-color: #e67965;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+  }
+
+  .pop-up-right {
+    display: flex;
+  }
+
+  .pop-up-right > h3 {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  .pop-up-head > h2 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .menu-content {
+    padding: 20px 40px;
+  }
+  .container {
+    padding: 2px 0px;
+    margin-left: 10px;
+  }
+
+  .card > img {
+    border-radius: 5px 5px 0 0;
+    margin-left: 20px;
+    width: 190px;
+    height: 200px;
+  }
+
+  .container > p:nth-child(1) {
+    color: #e67965;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .container > p:nth-child(2) {
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    color: #222222;
+    font-size: 17px;
+    letter-spacing: 0px;
+  }
+
+  .button-add-remove {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .button-add-remove > button:nth-child(1),
+  .button-add-remove > button:nth-child(2) {
+    padding: 15px 15px;
+    margin-right: 8px;
+    background-color: #e67965;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  .menu-content {
+    padding: 20px 40px;
+  }
+  .container {
+    padding: 2px 0px;
+    margin-left: 10px;
+  }
+
+  .card > img {
+    border-radius: 5px 5px 0 0;
+    margin-left: 0px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .container > p:nth-child(1) {
+    color: #e67965;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .container > p:nth-child(2) {
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    color: #222222;
+    font-size: 17px;
+    letter-spacing: 0px;
+  }
+
+  .button-add-remove {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .button-add-remove > button:nth-child(1),
+  .button-add-remove > button:nth-child(2) {
+    padding: 15px 20px;
+    margin-right: 8px;
+    background-color: #e67965;
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

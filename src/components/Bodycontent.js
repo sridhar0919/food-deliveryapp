@@ -1,5 +1,5 @@
 import React from 'react';
-import './Homepage.css';
+import './css/Homepage.css';
 import brandIcon1 from './images/brand1.jpg';
 import brandIcon2 from './images/brand2.jpg';
 import brandIcon3 from './images/brand3.jpg';
@@ -14,19 +14,19 @@ export default function Bodycontent() {
           <div>
             <a href="/menu" className="img-title">
               <i className="fas fa-2x fa-utensils"></i>
-              <h5 style={{ fontSize: '35px' }}>SEAFOOD</h5>
+              <h5>SEAFOOD</h5>
+            </a>
+          </div>
+          <div>
+            <a href="/menu" className="img-title img-second">
+              <i className="fas fa-2x fa-utensils"></i>
+              <h5>PIZZA</h5>
             </a>
           </div>
           <div>
             <a href="/menu" className="img-title">
               <i className="fas fa-2x fa-utensils"></i>
-              <h5 style={{ fontSize: '35px' }}>PIZZA</h5>
-            </a>
-          </div>
-          <div>
-            <a href="/menu" className="img-title">
-              <i className="fas fa-2x fa-utensils"></i>
-              <h5 style={{ fontSize: '35px' }}>DESSERTS</h5>
+              <h5>DESSERTS</h5>
             </a>
           </div>
         </div>
