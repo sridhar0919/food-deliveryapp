@@ -40,6 +40,37 @@ export default function Menu() {
       .catch((err) => console.log(err));
   };
 
+  const toggleMenuItems = (e) => {
+    if (e.target[0].value == 'pizza') {
+      axios
+        .get('https://food-deliveryapp1.herokuapp.com/get-food')
+        .then((res) => {
+          setPizzaMenu(res.data[0].item[0]);
+          setSeafoodMenu(null);
+          setDessertMenu(null);
+        })
+        .catch((err) => console.log(err));
+    } else if (e.target[0].value == 'seafood') {
+      axios
+        .get('https://food-deliveryapp1.herokuapp.com/get-food')
+        .then((res) => {
+          setPizzaMenu(null);
+          setSeafoodMenu(res.data[0].item[1]);
+          setDessertMenu(null);
+        })
+        .catch((err) => console.log(err));
+    } else if (e.target[0].value == 'dessert') {
+      axios
+        .get('https://food-deliveryapp1.herokuapp.com/get-food')
+        .then((res) => {
+          setPizzaMenu(null);
+          setSeafoodMenu(null);
+          setDessertMenu(res.data[0].item[2]);
+        })
+        .catch((err) => console.log(err));
+    }
+  };
+
   useEffect(() => {
     fetchMenu();
   }, []);
@@ -48,7 +79,25 @@ export default function Menu() {
     <div>
       <Navbar />
       <section className="menu-content">
-        <h1>Pizza menu</h1>
+        <div className="menu-category-option">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              toggleMenuItems(e);
+            }}
+          >
+            <select>
+              <option>Search By Menu</option>
+              <option value="pizza">Pizza</option>
+              <option value="seafood">Seafood</option>
+              <option value="dessert">Dessert</option>
+            </select>
+
+            <button type="submit">Search</button>
+          </form>
+        </div>
+
+        {pizzaMenu ? <h1>Pizza menu</h1> : <></>}
         <div className="first-menu">
           {pizzaMenu &&
             pizzaMenu.map((menu, index) => {
@@ -101,7 +150,7 @@ export default function Menu() {
               );
             })}
         </div>
-        <h1>Seafood Menu</h1>
+        {seafoodMenu ? <h1>Seafood Menu</h1> : <></>}
         <div className="first-menu">
           {seafoodMenu &&
             seafoodMenu.map((menu, index) => {
@@ -155,7 +204,7 @@ export default function Menu() {
             })}
         </div>
 
-        <h1>Dessert Menu</h1>
+        {dessertMenu ? <h1>Dessert Menu</h1> : <></>}
         <div className="first-menu">
           {dessertMenu &&
             dessertMenu.map((menu, index) => {

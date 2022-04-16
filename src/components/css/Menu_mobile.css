@@ -106,6 +106,36 @@
   }
 }
 
+@media (min-width: 320px) and (max-width: 440px) {
+  .menu-category-option {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .menu-category-option > form > select {
+    display: block;
+    padding: 8px 5px;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 14px;
+  }
+  
+  .menu-category-option > form > button {
+    display: block;
+    padding: 8px 20px;
+    border: none;
+    margin-top: 10px;
+    margin-right: 75px;
+    border-radius: 5px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    background-color: #ff8000;
+    color: white;
+  }
+}
+
 @media (min-width: 501px) and (max-width: 650px) {
   .card > img {
     border-radius: 5px 5px 0 0;

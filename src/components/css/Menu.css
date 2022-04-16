@@ -104,3 +104,28 @@
   margin-top: 25px;
   margin-right: 30px;
 }
+
+.menu-category-option {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.menu-category-option > form > select {
+  padding: 8px 5px;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 14px;
+}
+
+.menu-category-option > form  > button {
+  padding: 8px 20px;
+  border: none;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  cursor: pointer;
+  background-color: #ff8000;
+  color: white;
+}

@@ -9,6 +9,21 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
+function loadScript(src) {
+  return new Promise((resolve) => {
+    const script = document.createElement('script');
+    script.src = src;
+
+    script.onload = () => {
+      resolve(true);
+    };
+    script.onerror = () => {
+      resolve(false);
+    };
+    document.body.appendChild(script);
+  });
+}
+
 export default function Addtocart() {
   const [orders, setOrders] = useState(null);
   const [total, setTotal] = useState(null);
@@ -35,6 +50,47 @@ export default function Addtocart() {
         setTotal(res.data.details[0].item[0].total);
       })
       .catch((err) => console.log(err));
+  };
+
+  const displayRazorPay = async (totalPayment) => {
+    const res = await loadScript(
+      'https://checkout.razorpay.com/v1/checkout.js'
+    );
+    if (!res) {
+      alert('Razorpay SDK failed to load. Are you online?');
+      return;
+    }
+
+    axios
+      .post('https://food-deliveryapp1.herokuapp.com/create/orderId', {
+        amount: totalPayment * 100,
+      })
+      .then((res) => {
+        console.log(res.data.orderId);
+        const options = {
+          key: process.env.REACT_APP_RAZORPAY_KEY_ID,
+          amount: totalPayment * 100,
+          currency: 'INR',
+          name: 'Yummy',
+          description: 'Thank you for using yummy!',
+          image: 'https://example.com/your_logo',
+          order_id: res.data.orderId,
+          handler: function (response) {
+            // alert(`response.razorpay_payment_id`);
+            alert('Order placed successfully');
+            // alert(response.razorpay_order_id);
+            // alert(response.razorpay_signature);
+            navigate('/');
+          },
+          prefill: {
+            name: 'Sridhar',
+            email: 'sridhar@example.com',
+            contact: '9999999999',
+          },
+        };
+        var paymentObject = new window.Razorpay(options);
+        paymentObject.open();
+      });
   };
 
   useEffect(() => {
@@ -102,10 +158,7 @@ export default function Addtocart() {
               className="menu-button"
               onClick={(e) => {
                 e.preventDefault();
-                toast.success('Order placed successfully', {
-                  autoClose: false,
-                  closeOnClick: true,
-                });
+                displayRazorPay(total + 35);
               }}
             >
               PLACE ORDER

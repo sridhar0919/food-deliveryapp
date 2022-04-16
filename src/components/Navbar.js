@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './css/Homepage.css';
 import './css/Home_mobile.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const [isActive, setActive] = useState('false');
+  const navigate = useNavigate();
   return (
     <div className="body-first-content">
       <nav className="navbar">
@@ -24,22 +26,50 @@ export default function Navbar() {
         <div className={isActive ? 'navbar-links active' : 'navbar-links'}>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <a
+                onClick={(e) => {
+                  navigate('/');
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                Home
+              </a>
             </li>
             <span>|</span>
 
             <li>
-              <a href="/about-us">About us</a>
+              <a
+                onClick={(e) => {
+                  navigate('/about-us');
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                About us
+              </a>
             </li>
             <span>|</span>
 
             <li>
-              <a href="/menu">Menu & Specials</a>
+              <a
+                onClick={(e) => {
+                  navigate('/menu');
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                Menu & Specials
+              </a>
             </li>
             <span>|</span>
 
             <li>
-              <a href="/contact">Contact us</a>
+              <a
+                onClick={(e) => {
+                  navigate('/contact');
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                Contact us
+              </a>
             </li>
           </ul>
         </div>

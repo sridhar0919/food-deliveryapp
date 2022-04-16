@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import './css/Homepage.css';
 import brandIcon1 from './images/brand1.jpg';
 import brandIcon2 from './images/brand2.jpg';
@@ -7,24 +8,40 @@ import brandIcon4 from './images/brand4.jpg';
 import brandIcon5 from './images/brand5.jpg';
 
 export default function Bodycontent() {
+  const navigate = useNavigate();
   return (
     <div>
       <section>
         <div className="body-content">
           <div>
-            <a href="/menu" className="img-title">
+            <a
+              onClick={(e) => {
+                navigate('/menu');
+              }}
+              className="img-title"
+            >
               <i className="fas fa-2x fa-utensils"></i>
               <h5>SEAFOOD</h5>
             </a>
           </div>
           <div>
-            <a href="/menu" className="img-title img-second">
+            <a
+              onClick={(e) => {
+                navigate('/menu');
+              }}
+              className="img-title img-second"
+            >
               <i className="fas fa-2x fa-utensils"></i>
               <h5>PIZZA</h5>
             </a>
           </div>
           <div>
-            <a href="/menu" className="img-title">
+            <a
+              onClick={(e) => {
+                navigate('/menu');
+              }}
+              className="img-title"
+            >
               <i className="fas fa-2x fa-utensils"></i>
               <h5>DESSERTS</h5>
             </a>
